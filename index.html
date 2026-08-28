@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Azola Jokweni {Portfolio};</title>
+  <meta name="description" content="Azola Jokweni — Junior Developer portfolio and CV." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav id="navbar" class="nav">
+    <a href="#welcome-section" class="nav-mark">AJ<span class="cursor-blip"></span></a>
+    <ul class="nav-list">
+      <li><a href="#welcome-section" data-file="about.md">about.md</a></li>
+      <li><a href="#projects" data-file="work/">work/</a></li>
+      <li><a href="#contact" data-file="contact.sh">contact.sh</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="welcome-section" class="welcome-section" data-status="~/portfolio/about — editing">
+      <div class="terminal-card">
+        <div class="terminal-chrome">
+          <span class="dot dot-red"></span><span class="dot dot-amber"></span><span class="dot dot-teal"></span>
+          <span class="terminal-path">azola@portfolio:~$</span>
+        </div>
+        <div class="terminal-body">
+          <img class="avatar" src="assets/azola-photo.jpg" alt="Photo of Azola Jokweni">
+          <h1>Azola Jokweni</h1>
+          <p class="role"><span id="typedRole"></span><span class="type-cursor">&nbsp;</span></p>
+          <p class="tagline">I build websites and applications that blend creativity with minimalism.</p>
+        </div>
+      </div>
+      <a href="#projects" class="scroll-hint" aria-label="Scroll to work">↓ scroll</a>
+    </section>
+
+    <section id="projects" class="projects-section" data-status="~/portfolio/work — 3 files">
+      <div class="section-head">
+        <span class="eyebrow">// 03 files</span>
+        <h2>Here's some of my work</h2>
+      </div>
+
+      <div class="file-list">
+        <a href="https://github.com/Bit-by-Bit-Omnitrack/Omnitrack" target="_blank" rel="noopener" class="file-row">
+          <span class="file-icon ext-git">gh</span>
+          <span class="file-name">Bit by Bit - Omnitrack<span class="file-ext">.repo</span></span>
+          <span class="file-desc">ASP.NET Core MVC App with Role-Based Authentication and Authorization</span>
+          <span class="file-arrow">→</span>
+        </a>
+
+        <a href="https://azolajokweni.github.io/Sanele-Rogue/" target="_blank" rel="noopener" class="file-row">
+          <span class="file-icon ext-git">&lt;/&gt;</span>
+          <span class="file-name">Sanele Rogue - Artist Website<span class="file-ext">.web</span></span>
+          <span class="file-desc">This is a premium-looking artist landing page for Sanele Rogue.</span>
+          <span class="file-arrow">→</span>
+        </a>
+
+        <a href="assets/azola-jokweni-cv.pdf" target="_blank" class="file-row" download>
+          <span class="file-icon ext-pdf">pdf</span>
+          <span class="file-name">azola-jokweni-cv<span class="file-ext">.pdf</span></span>
+          <span class="file-desc">Download the full CV</span>
+          <span class="file-arrow">↓</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section" data-status="~/portfolio/contact — awaiting input">
+      <div class="section-head">
+        <span class="eyebrow">// reach out</span>
+        <h2>Contact Me</h2>
+        <p class="subhead">Get in touch through any of these channels</p>
+      </div>
+
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/azola-jokweni-47389110" target="_blank" rel="noopener" class="contact-pill">
+          <i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn
+        </a>
+        <a href="mailto:jokweniazola@gmail.com" class="contact-pill">
+          <i class="fas fa-at" aria-hidden="true"></i> E-mail
+        </a>
+        <a href="tel:067-688-0808" class="contact-pill">
+          <i class="fas fa-mobile-alt" aria-hidden="true"></i> Call
+        </a>
+      </div>
+
+      <div class="sensor-panel">
+        <div class="sensor-head">
+          <span class="sensor-dot"></span>
+          <span>weather.sh</span>
+        </div>
+        <div class="sensor-body">
+          <input type="text" id="cityInput" placeholder="Enter a city…" />
+          <button id="city-input-btn" onclick="getWeather()">Get Weather</button>
+          <div class="result" id="weatherResult"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 Azola Jokweni</span>
+    <span class="footer-mono">built with vanilla HTML · CSS · JS</span>
+  </footer>
+
+  <div id="statusbar" class="statusbar">
+    <span class="status-branch">⎇ main</span>
+    <span class="status-path" id="statusPath">~/portfolio/about</span>
+    <span class="status-spacer"></span>
+    <span class="status-clock" id="statusClock"></span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
